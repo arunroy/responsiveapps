@@ -37,7 +37,7 @@ function getData(e){
 	
 	var headers=['Name','Age','Shoe size','Title'];
 	var fields=['name','age','shoe_size','title'];
-	var table=generateTable(employee, headers, fields);
+	var table=generateTable(filteredArray, headers, fields);
 	//alert(table);
 	
 	var dvTable = document.getElementById("userTable");
