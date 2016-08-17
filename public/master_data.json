@@ -1,0 +1,21 @@
+[
+  {
+    "name": "Jeff Chadwick",
+    "age": 36,
+    "shoe_size": 8,
+    "title": "CEO"
+  },
+  {
+    "name": "Chad Jeffers",
+    "age": 23,
+    "shoe_size": 6,
+    "title": "Tea Boy"
+  },
+  {
+    "name": "Charlie Tadpole",
+    "age": 42,
+    "shoe_size": 9,
+    "title": "Accountant"
+  }
+]
+

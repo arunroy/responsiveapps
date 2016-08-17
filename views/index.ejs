@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<head>
+		<title>
+			Responsive Tables Exercise
+		</title>
+		<link rel="stylesheet" type="text/css" href="stylesheets/styles.css">
+		<!-- respond.js polyfill for supporting media queries -->
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+		<!--JSON2 polyfill for supporting JSON parse on older browsers-->
+		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/json2/20110223/json2.js"></script>
+	</head>
+	<body>
+	<div id="testTable"></div>
+<!--	division for practical test Lookup-->
+	<div id="lookupDiv">
+		
+		<h1>Search User</h1>
+
+		<hr />
+		
+		<input type="text" id="searchTxt"></input>
+		
+		<input type="button" id="searchTxtBtn" onclick="fetchData()" value="Search"></input>
+		
+		<hr />
+
+		<div id="userTable"></div>
+	</div>
+<!--	division for practical test Lookup ends here -->
+	
+<!--	division for practical test Lookup-->
+	<div id="pivotTableDiv">
+		
+		<h1>Savings Account</h1>
+
+		<hr />
+		
+		<table id="productTableMin">
+				<tr><td></td></tr>
+				<tr><td></td></tr>
+				<tr><td></td></tr>
+				<tr><td></td></tr>
+		</table>
+
+		<div id="linksWrapper">
+			<a href="#" id="prevBtn" onclick="updateProductMinTable(true,0)"></a>
+			<a href="#" id="nextBtn" onclick="updateProductMinTable(true,1)"></a>
+		</div>
+		
+		<hr />
+
+		
+		<div id="prodTable"></div>
+	</div>
+	
+	<div>
+		<a href="#" onclick="toggleViews()">Next Test</a>
+	</div>
+	
+	<script type="text/javascript">
+		function toggleViews(){
+			if(document.getElementById('lookupDiv').style.display=='none'){
+				document.getElementById('lookupDiv').style.display='block';
+				document.getElementById('pivotTableDiv').style.display='none';
+			}
+			else{
+				document.getElementById('lookupDiv').style.display='none';
+				document.getElementById('pivotTableDiv').style.display='block';
+			}
+		}
+	</script>
+<!--	division for practical test Lookup-->
+		<script type="text/javascript" src="javascripts/utils.js"></script>
+		<script type="text/javascript" src="javascripts/lookup.js"></script>
+		<script type="text/javascript" src="javascripts/savingsBank.js"></script>
+
+	</body>
+</html>

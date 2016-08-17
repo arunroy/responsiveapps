@@ -1,0 +1,159 @@
+body {
+  
+  font: 20px 'Helvetica Regular', Arial, sans-serif;
+  color: #0c332f;
+  line-height: 36px;
+	margin: 0px;
+}
+
+a {
+  color: #8c6300;
+  font: 20px 'Helvetica', Arial, sans-serif;
+  line-height: 36px;
+  font-weight: bold;
+}
+
+h1{
+	font-family: 'Helvetica Regular', Arial, sans-serif;
+	font-size: 24px;
+	font-weight: bold;
+	color: #e4efee;
+	background-color: #008c85;
+	line-height: 36px;
+	padding: 5px 5px;
+	overflow: hidden;
+	margin-top: 0;
+}
+
+table{
+/*	border-color: black;
+	border-style: double;*/
+	border-collapse: collapse;
+	padding: .75rem;
+    vertical-align: top;
+}
+table tr td, table th{
+	padding: 10px;
+	text-align: left;
+	border: 1px solid #eceeff;
+}
+
+table td.col-2, th.col-2{
+/*	color: red; */
+}
+
+table th{
+	vertical-align: bottom;
+}
+
+table tr:nth-child(even){
+	background-color: #eceeef;
+} 
+
+/*table tr:nth-child(odd){
+	background-color: #e4efee;
+} */
+
+.table-bordered td, .table-bordered th {
+    border: 1px solid #eceeef;
+}
+
+table#productTableMin {
+		display:none;
+		min-width: 200px;
+}
+
+#lookupDiv{
+	display: none;
+}
+
+@media only screen and (max-width: 544px) {
+	
+	body {
+	  font: 24px 'Helvetica Regular', Arial, sans-serif;
+	  color: #0c332f;
+	  background-color: #f9fbd0;
+	  line-height: 36px;
+	}
+
+	h1 {
+		font-family: 'Helvetica', Arial, sans-serif;
+		font-size: 36px;
+		font-weight: bold;
+		color: #e4efee;
+		background-color: #008c85;
+		line-height: 36px;
+	}
+	
+	a {
+	  color: #8c6300;
+	  font: 20px 'Helvetica', Arial, sans-serif;
+	  display: inline;	
+	  line-height: 36px;
+	  font-weight: bold;
+	}
+	
+	a:link{
+    	text-decoration: none;
+	}
+	
+	a:visited {
+		color: #977219;
+	}
+	
+	a:hover{
+    	text-decoration: none;
+	}
+	
+	table tr:nth-child(even){
+	background-color: #eceeef;
+	} 
+
+	table tr:nth-child(odd){
+		background-color: ghostwhite;
+			/*#e4efee;*/
+	} 
+	
+	div#userTable table td.col-2,div#userTable table td.col-3, div#userTable table th.col-2,div#userTable table th.col-3{
+		display: none;
+	}
+	
+	#prodTable {
+		display:none;
+	}
+	
+	table#productTableMin{
+		display:block;
+	}
+	
+	table#productTableMin td{
+		/*color: green;*/
+		min-width: 200px;
+		text-align: center;
+	}
+	
+	#linksWrapper{
+		overflow: hidden;
+		display: block;
+		max-width: 400px;
+	}
+	
+	#nextBtn{
+		float: right;
+		margin: 10px;
+	}
+
+	#prevBtn{
+		float: left;
+		margin: 10px;
+	}
+}
+
+
+@media all and (min-width: 551px){
+		
+	#linksWrapper{
+		display: none;
+	}
+
+}
