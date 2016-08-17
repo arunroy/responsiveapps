@@ -27,12 +27,13 @@
         <hr />
 
         <div id="userTable"></div>
-    </div>
+ 
+         </div>
     <!--	division for practical test #1 Lookup ends here -->
 
     <!--	division for practical test #2 Pivot table start here-->
     
-    <hr />
+   
     
     <div id="pivotTableDiv">
 
@@ -62,25 +63,25 @@
     </div>
 	<!--	division for practical test #2 Pivot table ends here-->
    
-<!--    <div>
+    <div>
     	<hr />
-		<input type="button" value="Toggle Tasks" onclick="toggleViews()"></input>
-    </div>-->
+		<input type="button" value="Test-1" onclick="loadTask(1)"></input>
+   		<input type="button" value="Test-2" onclick="loadTask(2)"></input>
+    </div>
 
-<!--    <script type="text/javascript">
-        function toggleViews() {
-			
-            if (document.getElementById('lookupDiv').style.display == 'none') {
-				console.log('display none');
-                document.getElementById('lookupDiv').style.display = 'block';
-                document.getElementById('pivotTableDiv').style.display = 'none';
-            } else {
-				console.log('display block');
-                document.getElementById('lookupDiv').style.display = 'none';
-                document.getElementById('pivotTableDiv').style.display = 'block';
-            }
+    <script type="text/javascript">
+        function loadTask(id) {
+			if(id==1){
+				document.getElementById('lookupDiv').style.display = 'block';
+				document.getElementById('pivotTableDiv').style.display = 'none';
+				
+			}
+			else{
+				document.getElementById('lookupDiv').style.display = 'none';
+				document.getElementById('pivotTableDiv').style.display = 'block';
+			}
         }
-    </script>-->
+    </script>
     <!--	division for practical test Lookup-->
     <script type="text/javascript" src="javascripts/utils.js"></script>
     <script type="text/javascript" src="javascripts/userLookup.js"></script>
