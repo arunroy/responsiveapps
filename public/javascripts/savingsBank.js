@@ -1,25 +1,25 @@
-	var product;
+/*Interface Practical Test #2!*/
 
-	getAjaxData('savings_data.json', 'get', function(obj){
+var product;
 
-			product=JSON.parse(obj.responseText);
-			product.activeIndex=0;
-			
-			console.log(product);
-		
-		
-			var headers=['Product','Interest Rate','Minimum Deposit','Interest Type'];
-			var fields=['product','interest_rate','minimum_deposit','interest_type'];
-			var table=generateTable(product, headers, fields,'productTable');
-			
-			console.log(table);
-			var dvTable = document.getElementById("prodTable");
-			dvTable.innerHTML = "";
-			dvTable.appendChild(table);
-		
-			updateProductMinTable(false,1);
-		
-		});	
+getAjaxData('savings_data.json', 'get', function(obj){
+
+	product=JSON.parse(obj.responseText);
+	product.activeIndex=0;
+
+	var headers=['Product','Interest Rate','Minimum Deposit','Interest Type'];
+	var fields=['product','interest_rate','minimum_deposit','interest_type'];
+	
+	/*Generate table dynamically from the object and add to the interface*/
+	var table=generateTable(product, headers, fields,'productTable');
+
+	var dvTable = document.getElementById("prodTable");
+	dvTable.innerHTML = "";
+	dvTable.appendChild(table);
+
+	updateProductMinTable(false,1); //update data in mobile view version of the product table
+
+});	
 
 
 /*Function to update product table rendered on small devices
@@ -34,8 +34,6 @@ function updateProductMinTable(updateIndc,directionIndc){
 		if(directionIndc==1){
 			if(product.activeIndex<product.length-1){
 				product.activeIndex++;
-			} else{
-			console.log('Index out of bounds');
 			}
 		}
 		else{
@@ -45,6 +43,8 @@ function updateProductMinTable(updateIndc,directionIndc){
 		}
 	}
 	
+	/*	Update the next and previous buttons to navigate to other products
+		visible in mobile view */
 	if(product.activeIndex>0){
 		document.getElementById('prevBtn').innerHTML='&lt'+product[product.activeIndex-1].product;
 	}
@@ -52,15 +52,13 @@ function updateProductMinTable(updateIndc,directionIndc){
 		document.getElementById('nextBtn').innerHTML=product[product.activeIndex+1].product+'&gt';
 	}
 	
-	console.log(product);
-	
+	/*Update the product table to display the item corresponding to the active index */
 	var table = document.getElementById('productTableMin');
-	
 	var fields=['product','interest_rate','minimum_deposit','interest_type'];
 	var index=product.activeIndex;
 	
 	for(var i=0;i<fields.length;i++){
-		table.rows[i].cells[0].innerHTML=product[index][fields[i]];
+		table.rows[i].cells[0].innerHTML=product[index][fields[i]]; //update each row of the product table(mobile view)
 	}
 
 }
