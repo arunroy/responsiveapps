@@ -20,8 +20,6 @@
 
         <h1>Search User</h1>
 
-        <hr />
-
         <input type="text" id="searchTxt"></input>
 
         <input type="button" id="searchTxtBtn" onclick="fetchData()" value="Search"></input>
@@ -33,11 +31,12 @@
     <!--	division for practical test #1 Lookup ends here -->
 
     <!--	division for practical test #2 Pivot table start here-->
+    
+    <hr />
+    
     <div id="pivotTableDiv">
 
         <h1>Savings Account</h1>
-
-        <hr />
 
         <table id="productTableMin">
             <tr>
@@ -59,19 +58,16 @@
             <a href="#" id="nextBtn" onclick="updateProductMinTable(true,1)"></a>
         </div>
 
-        <hr />
-
-
-        <div id="prodTable"></div>
+   		 <div id="prodTable"></div>
     </div>
 	<!--	division for practical test #2 Pivot table ends here-->
    
-    <div>
+<!--    <div>
     	<hr />
 		<input type="button" value="Toggle Tasks" onclick="toggleViews()"></input>
-    </div>
+    </div>-->
 
-    <script type="text/javascript">
+<!--    <script type="text/javascript">
         function toggleViews() {
 			
             if (document.getElementById('lookupDiv').style.display == 'none') {
@@ -84,7 +80,7 @@
                 document.getElementById('pivotTableDiv').style.display = 'block';
             }
         }
-    </script>
+    </script>-->
     <!--	division for practical test Lookup-->
     <script type="text/javascript" src="javascripts/utils.js"></script>
     <script type="text/javascript" src="javascripts/userLookup.js"></script>
