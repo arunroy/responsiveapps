@@ -128,7 +128,7 @@ table#productTableMin {
 	
 	table#productTableMin td{
 		/*color: green;*/
-		min-width: 200px;
+		min-width: 300px;
 		text-align: center;
 	}
 	
