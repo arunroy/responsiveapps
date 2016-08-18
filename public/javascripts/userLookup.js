@@ -38,11 +38,14 @@ function getData(e){
 	var headers=['Name','Age','Shoe size','Title'];
 	var fields=['name','age','shoe_size','title'];
 	var table=generateTable(filteredArray, headers, fields);
-	//alert(table);
 	
 	var dvTable = document.getElementById("userTable");
 	dvTable.innerHTML = "";
 	dvTable.appendChild(table);
+	
+	
+	var tbl = document.getElementById('productTable');
+		
 }
 
 
@@ -51,14 +54,12 @@ function fetchData(){
 	getAjaxData('master_data.json', 'get', function(obj){
 		
 		emp=obj.responseText;
-		//console.log(emp);
-		
+
 		employee=JSON.parse(emp);
 		
 		var headers=['Name','Age','Shoe size','Title'];
 		var fields=['name','age','shoe_size','title'];
-		var table=generateTable(employee, headers, fields);
-		//alert(table);
+		var table=generateTable(employee, headers, fields,'userTbl');
 
 		var dvTable = document.getElementById("userTable");
 		dvTable.innerHTML = "";

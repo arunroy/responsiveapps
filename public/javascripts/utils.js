@@ -32,16 +32,18 @@ function getAjaxData(url, method, callback, params) {
 Returns HTML DOM Table object
 Used by lookup.js and savingsBank.js*/
 
-function generateTable(srcArray, headers, fields){
+function generateTable(srcArray, headers, fields, id){
 
 	var table = document.createElement("TABLE");
+	table.id=id;
 		var row = table.insertRow(-1);
 	
 		/*generate the header from the header elements list passed*/
 		for(var i=0;i<headers.length;i++){
 			var header=document.createElement('TH');
 			header.innerHTML=headers[i];
-			header.setAttribute('class','col-'+(i+1));
+			header.className='col-'+i;
+			header.setAttribute('class','col-'+i);
 			row.appendChild(header);
 		}
 	
@@ -53,7 +55,8 @@ function generateTable(srcArray, headers, fields){
 					for(var j=0;j<fields.length;j++){
 						var cell = row.insertCell(-1);
 						cell.innerHTML = srcArray[i][fields[j]];
-						cell.setAttribute('class','col-'+j);//class for applying style to have specific columns displayed on small devices
+						cell.className='col-'+j;
+						//cell.setAttribute('class','col-'+j+1);//class for applying style to have specific columns displayed on small devices
 					}
 			
 			}

@@ -17,6 +17,7 @@ getAjaxData('savings_data.json', 'get', function(obj){
 	var dvTable = document.getElementById("prodTable");
 	dvTable.innerHTML = "";
 	dvTable.appendChild(table);
+	
 
 	updateProductMinTable(false,1); //update data in mobile view version of the product table
 

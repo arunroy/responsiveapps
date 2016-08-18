@@ -122,8 +122,14 @@ table#productTableMin {
 		background-color: ghostwhite;
 	} 
 	
-	/*styles to make the second and third columns of usertable invisible when the page is rendered on smaller devices*/
-	div#userTable table td.col-2,div#userTable table td.col-3, div#userTable table th.col-2,div#userTable table th.col-3{
+	
+	.col-1 {
+		color: red;
+		display: none;
+	}	
+
+	.col-2 {
+		color: red;
 		display: none;
 	}
 	
@@ -160,7 +166,7 @@ table#productTableMin {
 		margin: 10px;
 	}
 }
-
+ 
 
 @media all and (min-width: 551px){
 		
