@@ -1,3 +1,5 @@
+/*Generic page styles*/
+/*Author : Arun Karthic R*/
 body {
   
   font: 20px 'Helvetica Regular', Arial, sans-serif;
@@ -26,47 +28,54 @@ h1{
 }
 
 table{
-/*	border-color: black;
-	border-style: double;*/
 	border-collapse: collapse;
 	padding: .75rem;
     vertical-align: top;
 }
+
+/*set the generic styles for tables*/
 table tr td, table th{
 	padding: 10px;
 	text-align: left;
 	border: 1px solid #eceeff;
 }
 
-table td.col-2, th.col-2{
-/*	color: red; */
-}
-
 table th{
 	vertical-align: bottom;
 }
 
+/*for striped style of the table*/
 table tr:nth-child(even){
 	background-color: #eceeef;
 } 
-
-/*table tr:nth-child(odd){
-	background-color: #e4efee;
-} */
 
 .table-bordered td, .table-bordered th {
     border: 1px solid #eceeef;
 }
 
+/*container for a set of items*/
+.container-wrapper{
+	margin: 0px 10px;	
+}
+
+/*style for product table which will be rendered in mobile view*/
 table#productTableMin {
 		display:none;
 		min-width: 200px;
 }
 
+/*this is the div which holds elements for exercise 1*/
 #lookupDiv{
 	display: none;
 }
 
+/*search box for exercise 1 */
+#searchTxt{
+	border-radius: 6px;
+	height: 20px;
+}
+
+/*apply styles for smaller displays*/
 @media only screen and (max-width: 544px) {
 	
 	body {
@@ -111,33 +120,36 @@ table#productTableMin {
 
 	table tr:nth-child(odd){
 		background-color: ghostwhite;
-			/*#e4efee;*/
 	} 
 	
+	/*styles to make the second and third columns of usertable invisible when the page is rendered on smaller devices*/
 	div#userTable table td.col-2,div#userTable table td.col-3, div#userTable table th.col-2,div#userTable table th.col-3{
 		display: none;
 	}
 	
+	/*hide product table on smaller devices, productTableMin will be shown on the interface instead*/
 	#prodTable {
 		display:none;
 	}
 	
+	/*product table that will be rendered on smaller devices*/
 	table#productTableMin{
 		display:block;
 	}
 	
 	table#productTableMin td{
-		/*color: green;*/
 		min-width: 300px;
 		text-align: center;
 	}
 	
+	/*container that holds the navigation button for product table in mobile view*/
 	#linksWrapper{
 		overflow: hidden;
 		display: block;
 		max-width: 400px;
 	}
 	
+	/*navigations buttons for product table rendered in mobile view*/
 	#nextBtn{
 		float: right;
 		margin: 10px;

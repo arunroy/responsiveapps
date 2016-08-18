@@ -1,12 +1,12 @@
+<!--Author : Arun Karthic R-->
 <!DOCTYPE html>
 <html>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--for media query support-->
-
 <head>
     <title>
         Responsive Apps Assessment
     </title>
+    <!--for media query support-->
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" type="text/css" href="stylesheets/styles.css">
     <!-- respond.js polyfill for supporting media queries -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -15,60 +15,63 @@
 </head>
 
 <body>
-    <!--	division for practical test #1 Lookup-->
-    <div id="lookupDiv">
+	<div class="">	
+	<!--	division for practical test #1 Lookup-->
+		<div id="lookupDiv">
 
-        <h1>Search User</h1>
+			<h1>Search User</h1>
+			
+			<div class="container-wrapper">
+				<input type="text" id="searchTxt" value="Search..." onfocus="if(document.getElementById('searchTxt').value=='Search...')document.getElementById('searchTxt').value=''" onblur="if(document.getElementById('searchTxt').value=='')document.getElementById('searchTxt').value='Search...'" />
 
-        <input type="text" id="searchTxt"></input>
+				<hr />
 
-        <input type="button" id="searchTxtBtn" onclick="fetchData()" value="Search"></input>
+				<div id="userTable"></div>
+			</div>
+		</div>
+		<!--	division for practical test #1 Lookup ends here -->
 
-        <hr />
+		<!--	division for practical test #2 Pivot table start here-->
 
-        <div id="userTable"></div>
- 
-         </div>
-    <!--	division for practical test #1 Lookup ends here -->
 
-    <!--	division for practical test #2 Pivot table start here-->
-    
-   
-    
-    <div id="pivotTableDiv">
 
-        <h1>Savings Account</h1>
+		<div id="pivotTableDiv">
 
-        <table id="productTableMin">
-            <tr>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-            </tr>
-        </table>
+			<h1>Savings Account</h1>
+			
+			<div class="container-wrapper">
+				<table id="productTableMin">
+					<tr>
+						<td></td>
+					</tr>
+					<tr>
+						<td></td>
+					</tr>
+					<tr>
+						<td></td>
+					</tr>
+					<tr>
+						<td></td>
+					</tr>
+				</table>
 
-        <div id="linksWrapper">
-            <a href="#" id="prevBtn" onclick="updateProductMinTable(true,0)"></a>
-            <a href="#" id="nextBtn" onclick="updateProductMinTable(true,1)"></a>
-        </div>
+				<div id="linksWrapper">
+					<a href="#" id="prevBtn" onclick="updateProductMinTable(true,0)"></a>
+					<a href="#" id="nextBtn" onclick="updateProductMinTable(true,1)"></a>
+				</div>
 
-   		 <div id="prodTable"></div>
-    </div>
-	<!--	division for practical test #2 Pivot table ends here-->
-   
-    <div>
-    	<hr />
-		<input type="button" value="Test-1" onclick="loadTask(1)"></input>
-   		<input type="button" value="Test-2" onclick="loadTask(2)"></input>
-    </div>
+				 <div id="prodTable"></div>
+			</div>
+		</div>
+		<!--	division for practical test #2 Pivot table ends here-->
 
+		<div class="container-wrapper">
+			<hr />
+			<input type="button" value="Test-1" onclick="loadTask(1)"/>
+			<input type="button" value="Test-2" onclick="loadTask(2)"/>
+		</div>
+	
+   </div>
     <script type="text/javascript">
         function loadTask(id) {
 			if(id==1){

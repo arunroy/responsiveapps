@@ -1,4 +1,5 @@
 /*Interface Practical Test 1*/
+/*Author : Arun Karthic R*/
 
 var employee;
 
@@ -15,7 +16,7 @@ document.getElementById("prevBtn").addEventListener("click", function(event){
 
 function getData(e){
 	
-	var queryString= document.getElementById('searchTxt').value;
+	var queryString= document.getElementById('searchTxt').value.toLowerCase();
 	var positions=[];
 	var filteredArray=[];
 	var flag=false;

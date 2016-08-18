@@ -1,4 +1,5 @@
 /*Interface Practical Test #2!*/
+/*Author : Arun Karthic R*/
 
 var product;
 
