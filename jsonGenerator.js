@@ -13,12 +13,15 @@
 
 /*users datafile script*/
 [
-  '{{repeat(2, 1)}}',
+  '{{repeat(20, 1)}}',
   {
     
     name: '{{firstName()}} {{surname()}}',
 	age: '{{integer(20, 40)}}',
     shoe_size : '{{integer()}}',   
-    gender: '{{gender()}}'
+    title: '{{random("Manager","Director","Accountant","Delivery head", "Team Lead","Consultant")}}'
   }
 ]
+
+
+
