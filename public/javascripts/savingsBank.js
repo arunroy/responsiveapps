@@ -19,7 +19,7 @@ getAjaxData('savings_data.json', 'get', function(obj){
 	dvTable.appendChild(table);
 	
 
-	updateProductMinTable(false,1); //update data in mobile view version of the product table
+	updateMinTable(); //update data in mobile view version of the product table
 
 });	
 
@@ -30,30 +30,29 @@ getAjaxData('savings_data.json', 'get', function(obj){
   directionIndc - if 1 then update next item
   					if 0 then update previous item
 */
-function updateProductMinTable(updateIndc,directionIndc){
+function updateProductMinTable(directionIndc){
 	
-	if(updateIndc){
-		if(directionIndc==1){
-			if(product.activeIndex<product.length-1){
-				product.activeIndex++;
+			if(directionIndc==1){
+		
+				if(product.activeIndex<product.length-1){					
+					product.activeIndex++;		
+				}
 			}
-		}
-		else{
-			if(product.activeIndex>0){
-				product.activeIndex--;
+			
+			else{
+				if(product.activeIndex>0){
+					product.activeIndex--;
+
+				}
 			}
-		}
+	
+		updateMinTable();
 	}
 	
-	/*	Update the next and previous buttons to navigate to other products
-		visible in mobile view */
-	if(product.activeIndex>0){
-		document.getElementById('prevBtn').innerHTML='&lt'+product[product.activeIndex-1].product;
-	}
-	if(product.activeIndex<product.length-1){
-		document.getElementById('nextBtn').innerHTML=product[product.activeIndex+1].product+'&gt';
-	}
-	
+/*	Update the next and previous buttons to navigate to other products visible in mobile view */
+
+function updateMinTable(){
+
 	/*Update the product table to display the item corresponding to the active index */
 	var table = document.getElementById('productTableMin');
 	var fields=['product','interest_rate','minimum_deposit','interest_type'];
@@ -61,6 +60,26 @@ function updateProductMinTable(updateIndc,directionIndc){
 	
 	for(var i=0;i<fields.length;i++){
 		table.rows[i].cells[0].innerHTML=product[index][fields[i]]; //update each row of the product table(mobile view)
+	}
+	
+	if(product.activeIndex<product.length-1){
+		
+			document.getElementById('nextBtn').innerHTML = product[product.activeIndex+1].product+'&gt';
+			document.getElementById('prevBtn').innerHTML = '&lt' + product[product.activeIndex].product;
+	}
+	
+	if(product.activeIndex==0){
+				document.getElementById('prevBtn').className = 'inactive-link';
+			}
+	else {
+		document.getElementById('prevBtn').className = '';
+	}
+	
+	if(product.activeIndex==product.length-1){
+			document.getElementById('nextBtn').className = 'inactive-link';
+	}
+	else{
+		document.getElementById('nextBtn').className = '';
 	}
 
 }

@@ -15,6 +15,11 @@ a {
   font-weight: bold;
 }
 
+.inactive-link{
+	pointer-events: none;
+	color: lightgrey;
+}
+
 h1{
 	font-family: 'Helvetica Regular', Arial, sans-serif;
 	font-size: 24px;
@@ -56,6 +61,7 @@ table tr:nth-child(even){
 /*container for a set of items*/
 .container-wrapper{
 	margin: 0px 10px;	
+	overflow: hidden;
 }
 
 /*style for product table which will be rendered in mobile view*/
@@ -70,11 +76,13 @@ table#productTableMin {
 }
 
 /*search box for exercise 1 */
-#searchTxt{
-	border-radius: 6px;
-	height: 20px;
+.searchTxt{
+	color: lightgrey;
 }
 
+.searchTxtActive{
+	color: black;
+}
 /*apply styles for smaller displays*/
 @media only screen and (max-width: 544px) {
 	
@@ -102,16 +110,20 @@ table#productTableMin {
 	  font-weight: bold;
 	}
 	
+
+	
 	a:link{
     	text-decoration: none;
 	}
 	
-	a:visited {
-		color: #977219;
-	}
-	
+
 	a:hover{
     	text-decoration: none;
+	}
+	
+	.inactive-link{
+		pointer-events: none;
+		color: lightgrey;
 	}
 	
 	table tr:nth-child(even){

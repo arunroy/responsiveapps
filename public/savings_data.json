@@ -1,20 +1,98 @@
 [
+{
+    "product": "SMS",
+    "interest_rate": "£893",
+    "minimum_deposit": 2,
+    "interest_type": "Flex"
+  },
   {
-    "product": "Fixed Saver",
-    "interest_rate": "2.20%",
-    "minimum_deposit": "£500",
+    "product": "SMS",
+    "interest_rate": "£972",
+    "minimum_deposit": 7,
+    "interest_type": "Tracker"
+  },
+  {
+    "product": "NetSuite",
+    "interest_rate": "£853",
+    "minimum_deposit": 5,
+    "interest_type": "Fixed"
+  },
+  {
+    "product": "SMS",
+    "interest_rate": "£576",
+    "minimum_deposit": 0,
+    "interest_type": "Tracker"
+  },
+  {
+    "product": "Direct",
+    "interest_rate": "£916",
+    "minimum_deposit": 2,
+    "interest_type": "Flex"
+  },
+  {
+    "product": "Offset saver",
+    "interest_rate": "£839",
+    "minimum_deposit": 2,
+    "interest_type": "Fixed"
+  },
+  {
+    "product": "NetSuite",
+    "interest_rate": "£595",
+    "minimum_deposit": 5,
     "interest_type": "Fixed"
   },
   {
     "product": "Flex Saver",
-    "interest_rate": "1.50%",
-    "minimum_deposit": "£0",
+    "interest_rate": "£717",
+    "minimum_deposit": 5,
+    "interest_type": "Flex"
+  },
+  {
+    "product": "Fixed Saver",
+    "interest_rate": "£596",
+    "minimum_deposit": 0,
     "interest_type": "Tracker"
   },
   {
-    "product": "Offset Saver",
-    "interest_rate": "1.80%",
-    "minimum_deposit": "£1000",
+    "product": "NetSuite",
+    "interest_rate": "£754",
+    "minimum_deposit": 8,
+    "interest_type": "Tracker"
+  },
+  {
+    "product": "Direct",
+    "interest_rate": "£841",
+    "minimum_deposit": 3,
+    "interest_type": "Tracker"
+  },
+  {
+    "product": "NetSuite",
+    "interest_rate": "£760",
+    "minimum_deposit": 10,
+    "interest_type": "Flex"
+  },
+  {
+    "product": "Flex Saver",
+    "interest_rate": "£784",
+    "minimum_deposit": 2,
+    "interest_type": "Flex"
+  },
+  {
+    "product": "SMS",
+    "interest_rate": "£610",
+    "minimum_deposit": 7,
     "interest_type": "Fixed"
+  },
+  {
+    "product": "Flex Saver",
+    "interest_rate": "£539",
+    "minimum_deposit": 5,
+    "interest_type": "Flex"
+  },
+  {
+    "product": "Flex Saver",
+    "interest_rate": "£500",
+    "minimum_deposit": 7,
+    "interest_type": "Flex"
   }
 ]

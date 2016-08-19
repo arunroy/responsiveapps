@@ -20,16 +20,22 @@ function getData(e){
 	var positions=[];
 	var filteredArray=[];
 	var flag=false;
-
+	
+	//console.log(employee[1].shoe_size.toLowerCase());
+	
 	//iterate the entire data set and see if the particular dataset is present
 	for(var i=0;i<employee.length;i++){
-		if(employee[i]['name'].toLowerCase().indexOf(queryString)>=0){
+		if((employee[i]['name'].toLowerCase().indexOf(queryString)>-1)||
+		   (employee[i]['age'].toString().indexOf(queryString)>-1)||
+		   (employee[i]['shoe_size'].toString().indexOf(queryString)>-1)||
+		   (employee[i]['title'].toLowerCase().indexOf(queryString)>-1)
+		  ){
 			flag=true;
 			positions.push(i);
 
 		}
 	}
-
+	
 
 	for(var i=0;i<positions.length;i++){
 		filteredArray.push(employee[positions[i]]);
@@ -39,7 +45,7 @@ function getData(e){
 	var fields=['name','age','shoe_size','title'];
 	var table=generateTable(filteredArray, headers, fields);
 	
-	var dvTable = document.getElementById("userTable");
+	var dvTable = document.getElementById("userTableDiv");
 	dvTable.innerHTML = "";
 	dvTable.appendChild(table);
 	
@@ -61,7 +67,7 @@ function fetchData(){
 		var fields=['name','age','shoe_size','title'];
 		var table=generateTable(employee, headers, fields,'userTbl');
 
-		var dvTable = document.getElementById("userTable");
+		var dvTable = document.getElementById("userTableDiv");
 		dvTable.innerHTML = "";
 		dvTable.appendChild(table);
 		});	

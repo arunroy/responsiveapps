@@ -11,7 +11,7 @@
     <!-- respond.js polyfill for supporting media queries -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
     <!--JSON2 polyfill for supporting JSON parse on older browsers-->
-    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/json2/20110223/json2.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/json2/20110223/json2.js"></script>
 </head>
 
 <body>
@@ -22,11 +22,11 @@
 			<h1>Search User</h1>
 			
 			<div class="container-wrapper">
-				<input type="text" id="searchTxt" value="Search..." onfocus="if(document.getElementById('searchTxt').value=='Search...')document.getElementById('searchTxt').value=''" onblur="if(document.getElementById('searchTxt').value=='')document.getElementById('searchTxt').value='Search...'" />
+				<input type="text" id="searchTxt" class="searchTxt" value="Search..." onfocus="focusSearchBox()"  onblur="blurSearchBox()" />
 
 				<hr />
 
-				<div id="userTable"></div>
+				<div id="userTableDiv"></div>
 			</div>
 		</div>
 		<!--	division for practical test #1 Lookup ends here -->
@@ -56,8 +56,8 @@
 				</table>
 
 				<div id="linksWrapper">
-					<a href="#" id="prevBtn" onclick="updateProductMinTable(true,0)"></a>
-					<a href="#" id="nextBtn" onclick="updateProductMinTable(true,1)"></a>
+					<a href="#" id="prevBtn" onclick="updateProductMinTable(0)"></a>
+					<a href="#" id="nextBtn" onclick="updateProductMinTable(1)"></a>
 				</div>
 
 				 <div id="prodTable"></div>
@@ -84,6 +84,16 @@
 				document.getElementById('pivotTableDiv').style.display = 'block';
 			}
         }
+		
+		function focusSearchBox(){
+				document.getElementById('searchTxt').value='';
+			    document.getElementById('searchTxt').className="searchTxtActive";
+		}
+		
+		function blurSearchBox(){
+				document.getElementById('searchTxt').value='Search';
+			    document.getElementById('searchTxt').className="searchTxt";
+		}
     </script>
     <!--	division for practical test Lookup-->
     <script type="text/javascript" src="javascripts/utils.js"></script>
