@@ -57,7 +57,7 @@ function getData(e){
 
 function fetchData(){
 	
-	getAjaxData('master_data.json', 'get', function(obj){
+	getAjaxData('users_data.json', 'get', function(obj){
 		
 		emp=obj.responseText;
 
