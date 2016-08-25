@@ -134,7 +134,10 @@ table#productTableMin {
 		background-color: ghostwhite;
 	} 
 	
-	
+	.thumb-image{
+		margin: 5px 0px;
+		width: 32px;
+	}
 	.col-1 {
 		color: red;
 		display: none;

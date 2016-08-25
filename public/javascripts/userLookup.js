@@ -17,37 +17,26 @@ document.getElementById("prevBtn").addEventListener("click", function(event){
 function getData(e){
 	
 	var queryString= document.getElementById('searchTxt').value.toLowerCase();
-	var positions=[];
-	var filteredArray=[];
-	var flag=false;
+	var throbber=document.getElementById('throbber');
+	throbber.style.display='inline';
 	
-	//console.log(employee[1].shoe_size.toLowerCase());
-	
-	//iterate the entire data set and see if the particular dataset is present
-	for(var i=0;i<employee.length;i++){
-		if((employee[i]['name'].toLowerCase().indexOf(queryString)>-1)||
-		   (employee[i]['age'].toString().indexOf(queryString)>-1)||
-		   (employee[i]['shoe_size'].toString().indexOf(queryString)>-1)||
-		   (employee[i]['title'].toLowerCase().indexOf(queryString)>-1)
-		  ){
-			flag=true;
-			positions.push(i);
+	getAjaxData('queryData?'+queryString, 'get', function(obj){
 
-		}
-	}
+			var filteredArray = JSON.parse(obj.responseText);
+			
+		
+			var headers=['Name','Age','Shoe size','Title'];
+			var fields=['name','age','shoe_size','title'];
+			var table=generateTable(filteredArray, headers, fields);
+
+			var dvTable = document.getElementById("userTableDiv");
+			dvTable.innerHTML = "";
+			dvTable.appendChild(table);
+			throbber.style.display='none';
+
+	});
 	
 
-	for(var i=0;i<positions.length;i++){
-		filteredArray.push(employee[positions[i]]);
-	}
-	
-	var headers=['Name','Age','Shoe size','Title'];
-	var fields=['name','age','shoe_size','title'];
-	var table=generateTable(filteredArray, headers, fields);
-	
-	var dvTable = document.getElementById("userTableDiv");
-	dvTable.innerHTML = "";
-	dvTable.appendChild(table);
 	
 	
 	var tbl = document.getElementById('productTable');

@@ -81,5 +81,5 @@ function updateMinTable(){
 	else{
 		document.getElementById('nextBtn').className = '';
 	}
-
+	
 }

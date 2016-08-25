@@ -1,0 +1,81 @@
+[
+   {
+    "name": "Hammond Knight",
+    "age": 27,
+    "shoe_size": 5,
+    "title": "Manager"
+  },
+  {
+    "name": "Moses Brown",
+    "age": 20,
+    "shoe_size": 4,
+    "title": "Consultant"
+  },
+  {
+    "name": "Morgan Mcguire",
+    "age": 20,
+    "shoe_size": 3,
+    "title": "Delivery head"
+  },
+  {
+    "name": "Martinez Mcintyre",
+    "age": 30,
+    "shoe_size": 1,
+    "title": "Manager"
+  },
+  {
+    "name": "Marisol Stephenson",
+    "age": 30,
+    "shoe_size": 9,
+    "title": "Delivery head"
+  },
+  {
+    "name": "Hardin Nieves",
+    "age": 23,
+    "shoe_size": 5,
+    "title": "Delivery head"
+  },
+  {
+    "name": "Lawrence Benjamin",
+    "age": 29,
+    "shoe_size": 1,
+    "title": "Accountant"
+  },
+  {
+    "name": "Rios Cummings",
+    "age": 35,
+    "shoe_size": 7,
+    "title": "Delivery head"
+  },
+  {
+    "name": "Kristen Dyer",
+    "age": 26,
+    "shoe_size": 5,
+    "title": "Consultant"
+  },
+  {
+    "name": "Vaughn Mcdonald",
+    "age": 28,
+    "shoe_size": 7,
+    "title": "Accountant"
+  },
+  {
+    "name": "Bridges Barrera",
+    "age": 20,
+    "shoe_size": 5,
+    "title": "Manager"
+  },
+  {
+    "name": "Tracie Cantrell",
+    "age": 20,
+    "shoe_size": 4,
+    "title": "Team Lead"
+  },
+  {
+    "name": "Clark Miranda",
+    "age": 24,
+    "shoe_size": 1,
+    "title": "Consultant"
+  }
+]
+
