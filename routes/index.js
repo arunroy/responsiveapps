@@ -37,8 +37,7 @@ router.get('/queryData?:queryString',function(req, res){
 	
 	/* Experimental delay for throbber animation */
 	setTimeout(function(){
-		
-		console.log('Time out function in execution');
+
 		//iterate the entire data set and see if the particular dataset is present
 		for(var i=0;i<file.length;i++){
 			if((file[i]['name'].toLowerCase().indexOf(queryString)>-1)||

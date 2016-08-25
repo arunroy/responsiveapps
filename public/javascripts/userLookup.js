@@ -23,11 +23,10 @@ function getData(e){
 	getAjaxData('queryData?'+queryString, 'get', function(obj){
 
 			var filteredArray = JSON.parse(obj.responseText);
-			
-		
+
 			var headers=['Name','Age','Shoe size','Title'];
-			var fields=['name','age','shoe_size','title'];
-			var table=generateTable(filteredArray, headers, fields);
+
+			var table=generateTable(filteredArray, headers, 'userTbl');
 
 			var dvTable = document.getElementById("userTableDiv");
 			dvTable.innerHTML = "";
@@ -35,11 +34,6 @@ function getData(e){
 			throbber.style.display='none';
 
 	});
-	
-
-	
-	
-	var tbl = document.getElementById('productTable');
 		
 }
 
@@ -53,8 +47,8 @@ function fetchData(){
 		employee=JSON.parse(emp);
 		
 		var headers=['Name','Age','Shoe size','Title'];
-		var fields=['name','age','shoe_size','title'];
-		var table=generateTable(employee, headers, fields,'userTbl');
+	
+		var table=generateTable(employee, headers, 'userTbl');
 
 		var dvTable = document.getElementById("userTableDiv");
 		dvTable.innerHTML = "";

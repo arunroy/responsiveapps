@@ -68,35 +68,13 @@
 
 		<div class="container-wrapper">
 			<hr />
-			<input type="button" value="Test-1" onclick="loadTask(1)"/>
-			<input type="button" value="Test-2" onclick="loadTask(2)"/>
+			<input type="button" value="Test-1" onclick="displayNextItem()"/>
+			<input type="button" value="Test-2" onclick="displayPrevItem()"/>
 		</div>
 	
    </div>
-    <script type="text/javascript">
-        function loadTask(id) {
-			if(id==1){
-				document.getElementById('lookupDiv').style.display = 'block';
-				document.getElementById('pivotTableDiv').style.display = 'none';
-				
-			}
-			else{
-				document.getElementById('lookupDiv').style.display = 'none';
-				document.getElementById('pivotTableDiv').style.display = 'block';
-			}
-        }
-		
-		function focusSearchBox(){
-				document.getElementById('searchTxt').value='';
-			    document.getElementById('searchTxt').className="searchTxtActive";
-		}
-		
-		function blurSearchBox(){
-				document.getElementById('searchTxt').value='Search';
-			    document.getElementById('searchTxt').className="searchTxt";
-		}
-    </script>
     <!--	division for practical test Lookup-->
+    <script type="text/javascript" src="javascripts/script.js"></script>
     <script type="text/javascript" src="javascripts/utils.js"></script>
     <script type="text/javascript" src="javascripts/userLookup.js"></script>
     <script type="text/javascript" src="javascripts/savingsBank.js"></script>

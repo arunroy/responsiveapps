@@ -9,10 +9,9 @@ getAjaxData('savings_data.json', 'get', function(obj){
 	product.activeIndex=0;
 
 	var headers=['Product','Interest Rate','Minimum Deposit','Interest Type'];
-	var fields=['product','interest_rate','minimum_deposit','interest_type'];
-	
+		
 	/*Generate table dynamically from the object and add to the interface*/
-	var table=generateTable(product, headers, fields,'productTable');
+	var table=generateTable(product, headers, 'productTable');
 
 	var dvTable = document.getElementById("prodTable");
 	dvTable.innerHTML = "";
@@ -55,8 +54,8 @@ function updateMinTable(){
 
 	/*Update the product table to display the item corresponding to the active index */
 	var table = document.getElementById('productTableMin');
-	var fields=['product','interest_rate','minimum_deposit','interest_type'];
 	var index=product.activeIndex;
+	var fields = Object.keys(product[0]);
 	
 	for(var i=0;i<fields.length;i++){
 		table.rows[i].cells[0].innerHTML=product[index][fields[i]]; //update each row of the product table(mobile view)

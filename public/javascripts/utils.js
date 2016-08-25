@@ -32,11 +32,12 @@ function getAjaxData(url, method, callback, params) {
 Returns HTML DOM Table object
 Used by lookup.js and savingsBank.js*/
 
-function generateTable(srcArray, headers, fields, id){
+function generateTable(srcArray, headers, id){
 
 	var table = document.createElement("TABLE");
 	table.id=id;
 		var row = table.insertRow(-1);
+		var fields = Object.keys(srcArray[0]);
 	
 		/*generate the header from the header elements list passed*/
 		for(var i=0;i<headers.length;i++){
