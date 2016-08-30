@@ -3,7 +3,7 @@
 			document.getElementById('pivotTableDiv').style.display = 'none';
 		}
 				
-	    function displayNextItem(){			
+	    function displayPrevItem(){			
 				document.getElementById('lookupDiv').style.display = 'none';
 				document.getElementById('pivotTableDiv').style.display = 'block';
         }
